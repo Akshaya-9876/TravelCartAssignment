@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddcartComponent } from './addcart/addcart.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { HotelComponent } from './hotel/hotel.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddcartComponent,
+    HeaderComponent,
+    HomeComponent,
+    HotelComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

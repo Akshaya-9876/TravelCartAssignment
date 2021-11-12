@@ -1,0 +1,43 @@
+
+<!-- <ng-container *ngif="products.length!=0"> -->
+    <div class="addtocart">
+      <div class="container">
+        <div class="card-table"> 
+          <div class="card-product">
+            <table class="table table-responsive"> 
+              <thead>
+                <tr>
+                  <th>Product Description</th>
+                  <th>Qty</th>
+                  <th>Unit Price</th>
+                  <th>Total Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of products; let i=index">
+                  <td > <img class="image" src="assets/img/location/{{item.location}}.png"   alt="">{{item.location}} visit</td>
+                  <td class="qty">{{item.quantity}}</td>
+                  <td class="price">{{item.price}}</td>
+                  <td class="total">{{item.total}}</td>
+                  <td>
+                    <a (click)="removeitem(item)">Remove</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2"></td>
+                  <td>cart price</td>
+                  <td class="grandtotal">Rs {{grandtotal}}</td>
+                  <td> <a (click)="emptycart()">Empty Cart</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- </ng-container> -->
+  
+  
+      
+  
+  

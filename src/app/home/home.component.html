@@ -1,0 +1,33 @@
+<div class="home" >
+    <div class="show">
+      <div class="row" >
+        <ng-container  *ngFor="let item of productList">
+          <div class="col-lg-4">
+            <div class="card" style="width: 25rem;">
+              <a [routerLink]="['/hotel', item.id]">
+                <img src="assets/img/location/{{item.location}}.png" (click)="view(item)" class="card-img-top" alt="...">
+              </a>
+              <!-- <img src="assets/img/location/{{item.location}}.png" class="card-img-top" alt="..."> -->
+              <div class="card-body">
+                <!-- <a [routerLink]="['/hotel', item.id]">
+                  <h5 class="card-title" (click)="view(item)" style="text-decoration: none;">{{item.id}}</h5>
+                </a> -->
+                <h5 class="card-title">{{item.id}}</h5>
+                <p class="price">Rs {{item.price}}</p>
+                <p>{{item.starRating}}</p>
+                <div class="icon">
+                  <a (click)="addtocart(item);"><i class="mdi mdi-cart-plus"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+
+  

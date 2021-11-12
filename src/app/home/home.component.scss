@@ -1,0 +1,45 @@
+.home{
+    background: #f1f3fa;
+    font-family: Roboto;
+    color: #707070;
+    margin-top: 50px;
+}
+.card{
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(147, 170, 185, 0.16);
+    margin-top: 50px;
+    border-collapse: separate; 
+}
+li{
+    text-decoration: none;
+}
+.show{
+    margin-left:5%;
+    margin-top: 2%;
+}
+.icon{
+    font-size: 30px;
+}
+.price{
+    font-family: Roboto;
+    font-weight: normal;
+    font-size: 20px;
+    color: #d21a1a;
+}
+.icon{
+    margin-left: 75%;
+    margin-top: -60px;
+}
+.card-title{
+    font:5px;
+    white-space: nowrap;
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
+    text-overflow: clip;
+}
+img{
+     height:200px;
+     border-radius: 15px;
+}
