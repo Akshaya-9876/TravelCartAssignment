@@ -18,6 +18,7 @@ export class AddcartComponent implements OnInit {
   }
   removeitem(item:any){
     this.cartservice.removecartitem(item);
+    console.log(item);
   }
   emptycart(){
     this.cartservice.removeallcart();
