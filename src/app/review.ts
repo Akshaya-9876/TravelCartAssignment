@@ -4,5 +4,4 @@ export class Review {
         public name: string,
         public review: string,
     ) {  }
-    
 }

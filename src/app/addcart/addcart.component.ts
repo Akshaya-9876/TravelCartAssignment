@@ -1,25 +1,5 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-addcart',
-//   templateUrl: './addcart.component.html',
-//   styleUrls: ['./addcart.component.scss']
-// })
-// export class AddcartComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
-
-
-
 import { Component, OnInit } from '@angular/core';
-import { ProductDetailsService } from '../product-details.service';
 import { AddtocartService } from '../addtocart.service';
-
 @Component({
   selector: 'app-addcart',
   templateUrl: './addcart.component.html',
@@ -36,13 +16,10 @@ export class AddcartComponent implements OnInit {
       this.grandtotal=this.cartservice.getTotalPrice();
     })
   }
-
   removeitem(item:any){
     this.cartservice.removecartitem(item);
   }
-
   emptycart(){
     this.cartservice.removeallcart();
   }
-
 }

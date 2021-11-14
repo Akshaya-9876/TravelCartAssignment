@@ -1,83 +1,32 @@
 <div class="product">
-    <div class="a">
-      <div class="card" style="width: 90rem; margin-left:40px;">
-        <div class="productImage">
-          <img src="assets/img/location/{{list.location}}.png" class="card-img-top" alt="..." style="border-radius: 15px;">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title" id="title">{{list.id}}</h5>
-          <p class="card-text" id="price">Rs {{list.price}}</p>
-          <p class="card-text" id="details">{{list.details}}</p>
-          <button (click)="addtocart(list)" class="addtocart"><i class="mdi mdi-cart-plus"></i>  Add To Cart</button>
-          <button class="addreview"><i class="mdi mdi-message-draw"></i>  Add review</button>
-        </div>
-    </div>
+  <div class="a">
+    <div class="card" style="width: 90rem; margin-left:40px;">
+      <div class="productImage">
+        <img src="assets/img/location/{{list.location}}.png" class="card-img-top" alt="..." style="border-radius: 15px;">
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" id="title">{{list.id}}</h5>
+        <p class="card-text" id="price">Rs {{list.price}}</p>
+        <p class="card-text" id="details">{{list.details}}</p>
+        <button (click)="addtocart(list)" class="addtocart"><i class="mdi mdi-cart-plus"></i>  Add To Cart</button>
+        <a routerLink="/forms"><button class="addreview"><i class="mdi mdi-message-draw"></i>  Add review</button></a>
+      </div>
   </div>
+</div>
     
 
-  <!-- <div>
-    <form action="">
-      <label for="">Name</label>
-      <input type="text" [(ngModel)]="name">
-      <p>{{name}}</p>
-      <label for="">Review</label>
-      <input type="text" [(ngModel)]="review">
-      <p>{{review}}</p>
-      <button>Add Review</button>
-    </form>
-  </div> -->
+ 
+  
+  
+      
+  
   
   
    
   
+     
   
       
-  
-  
-  
-    <!-- Review form -->
-  
-    
-  <!-- <div>
-    <form action="">
-      
-      <div class="form-group row">
-        <label for="name" class="col-sm-2 col-form-label">Name</label>
-        <div class="col-sm-10">
-          <input id="name" name="name" required="required" class="form-control">
-        </div>
-      </div>
-  
-      <div class="form-group row">
-        <label for="rating" class="col-sm-2 col-form-label">Rating</label>
-        <div class="col-sm-10 col-md-2">
-          <select id="rating" name="rating" class="form-control">
-            <option value="5">5</option>
-            <option value="4">4</option>
-            <option value="3">3</option>
-            <option value="2">2</option>
-            <option value="1">1</option>
-          </select>
-        </div>
-      </div>
-  
-      <div class="form-group row">
-        <label for="review" class="col-sm-2 col-form-label">Review</label>
-        <div class="col-sm-10">
-          <textarea name="review" id="review" rows="5" class="form-control"></textarea>
-        </div>
-      </div>
-  
-      <div class="form-group row">
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary float-right"style="margin-left:15px">Submit review</button>
-          <button type="button" class="btn btn-default float-right">Cancel</button>
-        </div>
-      </div>
-  
-    </form>
-  </div> -->
-  
   
   
   
@@ -91,29 +40,7 @@
   
     
   
-  <!-- <div class="container-fluid mb-5">
-    <form #userForm="ngForm">
   
-      {{userForm.value|json}}
-  
-      <hr />
-      {{userModel | json}}
-      <div class="form-group">
-        <label >Name</label>
-        <input type="text" class="form-control" name="name" [(ngModel)]="userModel.name">
-      </div>
-  
-      <div class="form-group">
-        <label>Review</label>
-        <input type="text" class="form-control" name="review" [(ngModel)]="userModel.review">
-      </div>
-  
-    </form>
-  
-  </div>
-  
-      -->
-     
    
   
    

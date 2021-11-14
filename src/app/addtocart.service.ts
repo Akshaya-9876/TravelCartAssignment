@@ -1,19 +1,7 @@
-// import { Injectable } from '@angular/core';
-
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class AddtocartService {
-
-//   constructor() { }
-// }
-
-
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-// import { Product } from './products';
-//import { HttpClient } from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root'
 })
