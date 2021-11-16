@@ -8,12 +8,14 @@ import { AddtocartService } from '../addtocart.service';
 export class AddcartComponent implements OnInit {
   public products:any=[];
   public grandtotal!:number;
+  public total !: number;
 
   constructor(private cartservice:AddtocartService) { }
     ngOnInit(): void {
     this.cartservice.getProducts().subscribe(res=>{
       this.products=res;
       this.grandtotal=this.cartservice.getTotalPrice();
+      this.total=this.cartservice.total();
     })
   }
   removeitem(item:any){

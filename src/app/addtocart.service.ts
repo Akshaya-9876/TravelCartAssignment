@@ -1,4 +1,4 @@
-import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { analyzeAndValidateNgModules, isNgTemplate, ThrowStmt } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -8,6 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 export class AddtocartService {
   public cartItemList:any=[];
   public productList=new BehaviorSubject<any>([]);
+  public amnt:any;
   constructor() { }
   getProducts(){
     return this.productList.asObservable();
@@ -17,17 +18,36 @@ export class AddtocartService {
     this.productList.next(product);
   }
   addtocart(product:any){
-    this.cartItemList.push(product);
-    this.productList.next(this.cartItemList);
+    const exist = this.cartItemList.find((item:any)=>{
+      return item.id === product.id;
+    })
+    if(exist) {
+      exist.quantity++;
+      this.total();
+    }
+    else {
+      this.cartItemList.push(product);
+      this.productList.next(this.cartItemList);
+      this.total();
+      console.log(this.cartItemList);
+    }
     this.getTotalPrice();
-    console.log(this.cartItemList);
   }
   getTotalPrice():number{
     let grandTotal=0;
     this.cartItemList.map((a:any)=>{
-      grandTotal += a.total;
+      grandTotal +=  this.amnt;
+      console.log(this.amnt);
     })
     return grandTotal;
+  }
+  total(){
+    let totalprice=0;
+    this.cartItemList.map((a:any)=>{
+      totalprice= a.quantity * a.price;
+    })
+    this.amnt = totalprice;
+    return totalprice;
   }
   removecartitem(product:any){
     this.cartItemList.map((a:any,index:any)=>{

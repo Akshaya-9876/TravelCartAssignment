@@ -16,9 +16,12 @@
               <td > <img class="image" src="assets/img/location/{{item.location}}.png"   alt="">     {{item.location}} visit</td>
               <td class="qty">{{item.quantity}}</td>
               <td class="price">{{item.price}}</td>
-              <td class="total">{{item.total}}</td>
+              <td class="total">{{total}}</td>
               <td>
                 <a (click)="removeitem(item)">Remove</a>
+              </td>
+              <td>
+                <a>Remove all</a>
               </td>
               </tr>
               <tr>
